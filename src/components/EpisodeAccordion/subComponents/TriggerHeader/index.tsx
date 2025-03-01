@@ -6,7 +6,7 @@ import "./index.scss";
 function TriggerHeader({ title }: { title: string }) {
   return (
     <div className="trigger-header">
-      <span>{title}</span>
+      <span title={title}>{title}</span>
       <CirclePlay />
     </div>
   );

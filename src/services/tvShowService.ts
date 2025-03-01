@@ -5,3 +5,9 @@ export async function getTvShowDetails() {
 
   return data;
 }
+
+export async function getTvShowEpisodes() {
+  const { data } = await api.get("/episodes/SHOW123.json");
+
+  return data;
+}

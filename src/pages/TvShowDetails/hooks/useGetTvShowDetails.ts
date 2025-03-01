@@ -10,10 +10,10 @@ function useGetTvShowDetails() {
     isError,
   } = useQuery({
     queryKey: ["tv-show-details"],
-    queryFn: fetchEmployees,
+    queryFn: fetchTvShowDetails,
   });
 
-  async function fetchEmployees() {
+  async function fetchTvShowDetails() {
     try {
       const data = await getTvShowDetails();
 

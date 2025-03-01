@@ -1,5 +1,6 @@
 import EpisodesList from "../../components/EpisodesList";
 import Tabs from "../../components/Tabs";
+import useGetTvShowEpisodes from "./hooks/useGetTvEpisodes";
 import useGetTvShowDetails from "./hooks/useGetTvShowDetails";
 
 // Styles
@@ -21,13 +22,22 @@ const footerTabs = [
 ];
 
 function TvShowDetails() {
-  const { isLoading, tvShowDetails, isError } = useGetTvShowDetails();
+  const {
+    isLoading: isLoadingShowDetails,
+    tvShowDetails,
+    isError: isErrorShowDetails,
+  } = useGetTvShowDetails();
+  const {
+    isLoading: isLoadingEpisodes,
+    episodesBySeason,
+    isError: isErrorEpisodes,
+  } = useGetTvShowEpisodes();
 
-  if (isLoading) {
+  if (isLoadingShowDetails || isLoadingEpisodes) {
     return <p>Loading...</p>;
   }
 
-  if (isError) {
+  if (isErrorShowDetails || isErrorEpisodes) {
     return <p>Error</p>;
   }
 
@@ -51,7 +61,9 @@ function TvShowDetails() {
           <div>X</div>
         </header>
         <section className="tv-show-details__episodes">
-          <EpisodesList />
+          {episodesBySeason && (
+            <EpisodesList episodesBySeason={episodesBySeason} />
+          )}
         </section>
       </section>
       <footer className="tv-show-details__info">

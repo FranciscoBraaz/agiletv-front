@@ -1,3 +1,4 @@
+import { Season } from "../../@types/episode";
 import EpisodeAccordion from "../EpisodeAccordion";
 import Tabs from "../Tabs";
 import useManageSeasons from "./hooks/useManageSeasons";
@@ -5,23 +6,12 @@ import useManageSeasons from "./hooks/useManageSeasons";
 // Styles
 import "./index.scss";
 
-const seasons = [
-  {
-    title: "T1",
-    key: "t1",
-  },
-  {
-    title: "T2",
-    key: "t2",
-  },
-  {
-    title: "T3",
-    key: "t3",
-  },
-];
-
-function EpisodesList() {
+function EpisodesList({ episodesBySeason }: { episodesBySeason: Season }) {
   const { activeSeason, handleChangeSeason } = useManageSeasons();
+  const seasons = Object.keys(episodesBySeason).map((season) => ({
+    title: `T${season}`,
+    key: `t${season}`,
+  }));
 
   return (
     <aside className="episodes-list">
@@ -31,15 +21,13 @@ function EpisodesList() {
         onChange={(item) => handleChangeSeason(item)}
       />
       <ul>
-        <li>
-          <EpisodeAccordion />
-        </li>
-        <li>
-          <EpisodeAccordion />
-        </li>
-        <li>
-          <EpisodeAccordion />
-        </li>
+        {episodesBySeason[Number(activeSeason.replace("t", ""))].map(
+          (episode) => (
+            <li key={episode.ID}>
+              <EpisodeAccordion episode={episode} />
+            </li>
+          )
+        )}
       </ul>
     </aside>
   );
