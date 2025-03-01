@@ -2,35 +2,16 @@
 
 .accordion__trigger {
   padding: 0;
-  background: #fff;
+  background: transparent;
   width: 100%;
 
   &__selector {
     display: flex;
-    background-color: #fff;
+    background-color: transparent;
     align-items: center;
     gap: 8px;
     cursor: pointer;
     width: 100%;
-
-    padding: 12px 16px;
-
-    & > span {
-      font-size: 12px;
-      color: variables.$black-600;
-      line-height: 140%;
-      letter-spacing: 0.4px;
-      width: 54px;
-    }
-
-    & > svg {
-      width: 17px;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: transform 300ms cubic-bezier(0.87, 0, 0.13, 1);
-    }
   }
 }
 
@@ -46,10 +27,6 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-}
-
-.accordion__header[data-state="open"] .accordion__trigger__selector svg {
-  transform: rotate(180deg);
 }
 
 .accordion__header[data-state="open"] .accordion__trigger__header-container {

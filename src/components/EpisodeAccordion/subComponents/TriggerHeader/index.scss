@@ -1,0 +1,48 @@
+@use "../../../../styles/variables.scss";
+
+.trigger-header {
+  padding: 0;
+  background: transparent;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & > span,
+  & > svg {
+    transition: all 0.2s ease;
+    color: variables.$text-secondary;
+  }
+
+  & > span {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  & > svg {
+    width: 28px;
+    height: 28px;
+
+    & > polygon {
+      fill: variables.$text-secondary;
+    }
+
+    & > circle {
+      stroke-width: 1px;
+    }
+  }
+
+  &:hover {
+    & > span,
+    & > svg {
+      color: variables.$white;
+    }
+
+    & > svg {
+      & > polygon {
+        fill: variables.$white;
+      }
+    }
+  }
+}

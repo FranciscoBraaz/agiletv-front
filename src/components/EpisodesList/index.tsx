@@ -1,3 +1,4 @@
+import EpisodeAccordion from "../EpisodeAccordion";
 import Tabs from "../Tabs";
 import useManageSeasons from "./hooks/useManageSeasons";
 
@@ -29,6 +30,17 @@ function EpisodesList() {
         activeTab={activeSeason}
         onChange={(item) => handleChangeSeason(item)}
       />
+      <ul>
+        <li>
+          <EpisodeAccordion />
+        </li>
+        <li>
+          <EpisodeAccordion />
+        </li>
+        <li>
+          <EpisodeAccordion />
+        </li>
+      </ul>
     </aside>
   );
 }

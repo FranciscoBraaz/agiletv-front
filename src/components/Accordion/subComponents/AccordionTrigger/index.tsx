@@ -1,6 +1,5 @@
 import { forwardRef } from "react";
 import { Header, Trigger } from "@radix-ui/react-accordion";
-import ChevronDown from "../../../../assets/chevronDown.svg?react";
 
 // Styles
 import "./index.scss";
@@ -17,7 +16,6 @@ const AccordionTrigger = forwardRef<HTMLButtonElement, AccordionTriggerProps>(
   (
     {
       children,
-      isOpen,
       onToggle,
       styleHeader,
       ariaLabelReference,
@@ -44,7 +42,6 @@ const AccordionTrigger = forwardRef<HTMLButtonElement, AccordionTriggerProps>(
                 onClick={onToggle}
               >
                 {children}
-                <ChevronDown />
               </button>
             </div>
           </div>

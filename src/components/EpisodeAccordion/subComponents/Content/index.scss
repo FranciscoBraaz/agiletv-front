@@ -1,0 +1,15 @@
+.episode-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+  width: calc(100% - 32px);
+
+  & > img {
+    height: fit-content;
+  }
+
+  & > p {
+    color: #828385;
+  }
+}

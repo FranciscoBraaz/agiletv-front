@@ -5,5 +5,14 @@
   max-width: 300px;
   padding: 0px 16px;
   margin-right: 36px;
-  // background-color: rgba(0, 0, 0, 0.3);
+
+  & > ul {
+    display: flex;
+    flex-direction: column;
+
+    & > li {
+      border-bottom: 1px solid #171b1e;
+      padding: 8px 0px;
+    }
+  }
 }
