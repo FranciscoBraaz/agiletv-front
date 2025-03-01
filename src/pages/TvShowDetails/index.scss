@@ -20,6 +20,11 @@
   color: variables.$white;
 }
 
+.tv-show-details__episodes {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .tv-show-details__info {
   background-color: variables.$bg-main;
   height: 220px;

@@ -1,3 +1,4 @@
+import EpisodesList from "../../components/EpisodesList";
 import useGetTvShowDetails from "./hooks/useGetTvShowDetails";
 
 // Styles
@@ -20,7 +21,7 @@ function TvShowDetails() {
         className="tv-show-details__main-section"
         style={{
           backgroundImage: `
-          linear-gradient(to left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)),
+          linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
           linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)),
           url(${tvShowDetails.Images.Background})
         `,
@@ -34,7 +35,7 @@ function TvShowDetails() {
           <div>X</div>
         </header>
         <section className="tv-show-details__episodes">
-          <p>GENERAL</p>
+          <EpisodesList />
         </section>
       </section>
       <footer className="tv-show-details__info">

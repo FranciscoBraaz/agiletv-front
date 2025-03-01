@@ -1,0 +1,39 @@
+@use "../../styles/variables.scss";
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tabs__list {
+  display: flex;
+  gap: 24px;
+}
+
+.tab {
+  color: variables.$text-primary;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: variables.$white;
+  }
+}
+
+.tabs__line {
+  height: 1px;
+  position: relative;
+  background-color: variables.$text-primary;
+  width: 100%;
+}
+
+.tabs__active-indicator {
+  height: 2px;
+  position: absolute;
+  background-color: variables.$main-default;
+  transition: all 0.3s ease;
+}
