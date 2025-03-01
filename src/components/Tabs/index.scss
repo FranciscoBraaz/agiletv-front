@@ -12,7 +12,7 @@
 }
 
 .tab {
-  color: variables.$text-primary;
+  color: #b1b2b4;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -20,12 +20,12 @@
   transition: color 0.3s ease;
 
   &:hover {
-    color: variables.$white;
+    color: #dedfe1;
   }
 }
 
 .tabs__line {
-  height: 1px;
+  height: 2px;
   position: relative;
   background-color: variables.$text-primary;
   width: 100%;

@@ -1,5 +1,5 @@
 // Custtom hooks
-import { useRef } from "react";
+import { CSSProperties, useRef } from "react";
 import useDefineClassName from "./hooks/useDefineClassName";
 import useManageTabs from "./hooks/useManageTabs";
 
@@ -9,6 +9,8 @@ import "./index.scss";
 interface TabsProps {
   tabs: Array<{ title: string; key: string }>;
   activeTab: string;
+  styleText?: CSSProperties;
+  styleTabLine?: CSSProperties;
   onChange: (key: string) => void;
 }
 
@@ -18,7 +20,9 @@ function Tabs({
     { title: "Sampl2", key: "sample2" },
   ],
   activeTab = "sample1",
-  onChange = () => {},
+  styleText,
+  styleTabLine,
+  onChange,
 }: TabsProps) {
   const activeIndicatorRef = useRef<HTMLDivElement>(null);
   const { defineClassName } = useDefineClassName();
@@ -27,7 +31,6 @@ function Tabs({
     activeIndicatorRef,
   });
 
-  console.log(activeIndicatorStyle);
   return (
     <div className="tabs">
       <ul className="tabs__list">
@@ -38,6 +41,7 @@ function Tabs({
                 ? `tabs-${tab.key}-selected`
                 : `tabs-${tab.key}`
             }
+            style={{ ...styleText }}
             className={defineClassName(tab.key === activeTab)}
             role="button"
             onClick={() => onChange(tab.key)}
@@ -47,7 +51,7 @@ function Tabs({
           </li>
         ))}
       </ul>
-      <div className="tabs__line">
+      <div className="tabs__line" style={{ ...styleTabLine }}>
         <div
           ref={activeIndicatorRef}
           className="tabs__active-indicator"

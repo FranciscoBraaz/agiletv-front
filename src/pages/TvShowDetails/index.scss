@@ -18,6 +18,19 @@
   justify-content: space-between;
   padding: 32px 30px 0px 50px;
   color: variables.$white;
+
+  & > div {
+    & > h1 {
+      font-size: 48px;
+      letter-spacing: 1px;
+    }
+
+    & > p {
+      font-size: 16px;
+      font-weight: 400;
+      color: #9fa6ae;
+    }
+  }
 }
 
 .tv-show-details__episodes {
@@ -27,5 +40,6 @@
 
 .tv-show-details__info {
   background-color: variables.$bg-main;
+  padding: 26px 50px;
   height: 220px;
 }
