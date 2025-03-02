@@ -14,6 +14,7 @@ import { CastInfo } from "../../components/CastInfo";
 
 // Styles
 import "./index.scss";
+import { formatTvShowGenres } from "../../utils";
 
 // Constants
 const footerTabs = [
@@ -66,14 +67,17 @@ function TvShowDetails() {
           backgroundImage: `
           linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
           linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)),
-          url(${tvShowDetails.Images.Background})
+          url(${tvShowDetails?.Images.Background})
         `,
         }}
       >
         <header className="tv-show-details__header">
           <div>
-            <h1>{tvShowDetails.Title}</h1>
-            <p>80% INDICADO / CIENCIA FINCCION / 2015 / EUA / 14</p>
+            <h1>{tvShowDetails?.Title}</h1>
+            <p>
+              80% INDICADO / {formatTvShowGenres(tvShowDetails?.Genres)} /{" "}
+              {tvShowDetails?.Year} / EUA / 14
+            </p>
           </div>
           <X color="#878787" size={32} />
         </header>
@@ -93,7 +97,7 @@ function TvShowDetails() {
         />
         {React.cloneElement(
           contentTabs[activeTab as keyof typeof contentTabs],
-          { synopsis: tvShowDetails.Synopsis, cast: tvShowDetails.Cast }
+          { synopsis: tvShowDetails?.Synopsis, cast: tvShowDetails?.Cast }
         )}
       </footer>
     </main>

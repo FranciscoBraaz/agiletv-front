@@ -2,12 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 
 // Custom hooks
 import { getTvShowDetails } from "../../../services/tvShowService";
-
-interface Character {
-  ID: string;
-  Name: string;
-  Role?: string;
-}
+import { Character, TvShowDetails } from "../../../@types/tvShowDetails";
 
 function useGetTvShowDetails() {
   const {
@@ -21,13 +16,21 @@ function useGetTvShowDetails() {
 
   async function fetchTvShowDetails() {
     try {
-      const data = await getTvShowDetails();
+      const data: TvShowDetails = await getTvShowDetails();
       data.Cast = completeCast(data.Cast);
 
       return data;
     } catch (error) {
       console.error(error);
-      return [];
+      return {
+        Cast: [],
+        Genres: [],
+        ID: "",
+        Synopsis: "",
+        Title: "",
+        Year: 0,
+        Images: { Background: "" },
+      };
     }
   }
 
