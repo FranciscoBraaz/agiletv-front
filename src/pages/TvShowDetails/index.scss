@@ -31,6 +31,16 @@
       color: #9fa6ae;
     }
   }
+
+  & > svg {
+    stroke-width: 1px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #fff;
+    }
+  }
 }
 
 .tv-show-details__episodes {
@@ -41,5 +51,5 @@
 .tv-show-details__info {
   background-color: variables.$bg-main;
   padding: 26px 50px;
-  height: 220px;
+  min-height: 220px;
 }

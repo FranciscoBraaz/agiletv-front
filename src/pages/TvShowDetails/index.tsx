@@ -1,7 +1,15 @@
-import EpisodesList from "../../components/EpisodesList";
-import Tabs from "../../components/Tabs";
+import React from "react";
+import { X } from "lucide-react";
+
+// Custom hooks
 import useGetTvShowEpisodes from "./hooks/useGetTvEpisodes";
 import useGetTvShowDetails from "./hooks/useGetTvShowDetails";
+import useManageTabs from "./hooks/useManageTabs";
+
+// Components
+import EpisodesList from "../../components/EpisodesList";
+import Tabs from "../../components/Tabs";
+import GeneralInfo from "../../components/GeneralInfo";
 
 // Styles
 import "./index.scss";
@@ -21,6 +29,12 @@ const footerTabs = [
   },
 ];
 
+const contentTabs = {
+  general: <GeneralInfo synopsis="" />,
+  cast: <p>Cast</p>,
+  "top-awards": <p>Top Awards</p>,
+};
+
 function TvShowDetails() {
   const {
     isLoading: isLoadingShowDetails,
@@ -32,6 +46,7 @@ function TvShowDetails() {
     episodesBySeason,
     isError: isErrorEpisodes,
   } = useGetTvShowEpisodes();
+  const { activeTab, handleChangeTab } = useManageTabs();
 
   if (isLoadingShowDetails || isLoadingEpisodes) {
     return <p>Loading...</p>;
@@ -58,7 +73,7 @@ function TvShowDetails() {
             <h1>{tvShowDetails.Title}</h1>
             <p>80% INDICADO / CIENCIA FINCCION / 2015 / EUA / 14</p>
           </div>
-          <div>X</div>
+          <X color="#878787" size={32} />
         </header>
         <section className="tv-show-details__episodes">
           {episodesBySeason && (
@@ -69,11 +84,15 @@ function TvShowDetails() {
       <footer className="tv-show-details__info">
         <Tabs
           tabs={footerTabs}
-          activeTab="general"
+          activeTab={activeTab}
           styleText={{ fontSize: 17, fontWeight: 600 }}
           styleTabLine={{ backgroundColor: "#2A2B2D" }}
-          onChange={(value) => console.log(value)}
+          onChange={(value) => handleChangeTab(value)}
         />
+        {React.cloneElement(
+          contentTabs[activeTab as keyof typeof contentTabs],
+          { synopsis: tvShowDetails.Synopsis }
+        )}
       </footer>
     </main>
   );

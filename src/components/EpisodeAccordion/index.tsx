@@ -24,15 +24,13 @@ function EpisodeAccordion({ episodes }: { episodes: Episode[] }) {
         <Item className="accordion__item" value={episode.ID}>
           <Header className="accordion__header">
             <Trigger
-              style={{
-                backgroundColor: "transparent",
-                height: 20,
-                width: "100%",
-                cursor: "pointer",
-              }}
+              className="accordion__trigger"
               aria-label="employee-details"
             >
-              <EpisodeTriggerHeader title={episode.Title} />
+              <EpisodeTriggerHeader
+                title={episode.Title}
+                episodeNumber={episode.EpisodeNumber}
+              />
             </Trigger>
           </Header>
           <Content aria-label="employee-details" className="accordion__content">

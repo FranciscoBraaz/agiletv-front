@@ -1,0 +1,58 @@
+@use "../../styles/variables.scss";
+
+.general-info {
+  display: flex;
+  gap: 24px;
+  padding: 24px 0px;
+
+  &__actions {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 270px;
+
+    & > li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      & > button {
+        background-color: transparent;
+        cursor: pointer;
+
+        & > p {
+          font-size: 12px;
+          color: #6b6c6e;
+          transition: color 0.3s ease;
+        }
+
+        & > svg {
+          width: 28px;
+          height: 28px;
+          color: #6b6c6e;
+          transition: color 0.3s ease;
+        }
+      }
+
+      &:hover {
+        & > button p,
+        & > button > svg {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: variables.$screen-lg) {
+  .general-info {
+    flex-direction: column;
+    gap: 16px;
+
+    &__actions {
+      max-width: unset;
+    }
+  }
+}
