@@ -1,0 +1,77 @@
+@use "../../styles/variables.scss";
+
+.tv-show-skeleton {
+  display: flex;
+  flex-direction: column;
+
+  & > main {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 220px);
+    padding: 32px;
+    background-color: variables.$bg-main;
+  }
+
+  & > footer {
+    height: 220px;
+    padding: 32px;
+    background-color: variables.$bg-main;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+.tv-show-skeleton__header {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tv-show-skeleton__middle-area {
+  display: flex;
+  align-items: center;
+
+  & > svg {
+    width: 48px;
+    height: 48px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.tv-show-skeleton__list-episodes {
+  // margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.tv-show-skeleton__footer-actions {
+  width: 100%;
+  max-width: 260px;
+  display: flex;
+  gap: 16px;
+
+  & > span {
+    flex: 1;
+  }
+}
+
+.tv-show-skeleton__footer-text {
+  flex: 1;
+  & > div {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    & > span {
+      height: 15px;
+    }
+  }
+}

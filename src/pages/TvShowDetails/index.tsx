@@ -18,6 +18,7 @@ import TopAwards from "../../components/TopAwards";
 
 // Styles
 import "./index.scss";
+import TvShowSkeleton from "../../components/TvShowSkeleton";
 
 // Constants
 const footerTabs = [
@@ -55,7 +56,7 @@ function TvShowDetails() {
   const { activeTab, handleChangeTab } = useManageTabs();
 
   if (isLoadingShowDetails || isLoadingEpisodes) {
-    return <p>Loading...</p>;
+    return <TvShowSkeleton />;
   }
 
   if (isErrorShowDetails || isErrorEpisodes) {
