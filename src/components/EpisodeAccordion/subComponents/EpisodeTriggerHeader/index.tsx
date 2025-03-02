@@ -3,13 +3,13 @@ import { CirclePlay } from "lucide-react";
 //Styles
 import "./index.scss";
 
-function TriggerHeader({ title }: { title: string }) {
+function EpisodeTriggerHeader({ title }: { title: string }) {
   return (
-    <div className="trigger-header">
+    <div className="episode-trigger-header">
       <span title={title}>{title}</span>
       <CirclePlay />
     </div>
   );
 }
 
-export default TriggerHeader;
+export default EpisodeTriggerHeader;

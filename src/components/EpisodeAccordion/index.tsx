@@ -1,18 +1,49 @@
 // Components
-import { Episode } from "../../@types/episode";
-import Accordion from "../Accordion";
-import Content from "./subComponents/Content";
-import TriggerHeader from "./subComponents/TriggerHeader";
+import {
+  Content,
+  Trigger,
+  Item,
+  Root,
+  Header,
+} from "@radix-ui/react-accordion";
 
-function EpisodeAccordion({ episode }: { episode: Episode }) {
+// Types
+import { Episode } from "../../@types/episode";
+
+// Components
+import EpisodeContent from "./subComponents/EpisodeContent";
+import EpisodeTriggerHeader from "./subComponents/EpisodeTriggerHeader";
+
+// Styles
+import "./index.scss";
+
+function EpisodeAccordion({ episodes }: { episodes: Episode[] }) {
   return (
-    <Accordion
-      triggerHeader={<TriggerHeader title={episode.Title} />}
-      styleHeader={{ backgroundColor: "transparent", height: 20 }}
-      content={<Content image={episode.Image} description={episode.Synopsis} />}
-      defaultValue=""
-      ariaLabelReference="employee-details"
-    />
+    <Root className="accordion" type="single" collapsible>
+      {episodes.map((episode) => (
+        <Item className="accordion__item" value={episode.ID}>
+          <Header className="accordion__header">
+            <Trigger
+              style={{
+                backgroundColor: "transparent",
+                height: 20,
+                width: "100%",
+                cursor: "pointer",
+              }}
+              aria-label="employee-details"
+            >
+              <EpisodeTriggerHeader title={episode.Title} />
+            </Trigger>
+          </Header>
+          <Content aria-label="employee-details" className="accordion__content">
+            <EpisodeContent
+              image={episode.Image}
+              description={episode.Synopsis}
+            />
+          </Content>
+        </Item>
+      ))}
+    </Root>
   );
 }
 

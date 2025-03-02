@@ -1,7 +1,7 @@
 // Styles
 import "./index.scss";
 
-function Content({
+function EpisodeContent({
   image,
   description,
 }: {
@@ -16,4 +16,4 @@ function Content({
   );
 }
 
-export default Content;
+export default EpisodeContent;

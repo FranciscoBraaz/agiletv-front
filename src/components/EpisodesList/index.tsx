@@ -21,13 +21,9 @@ function EpisodesList({ episodesBySeason }: { episodesBySeason: Season }) {
         onChange={(item) => handleChangeSeason(item)}
       />
       <ul>
-        {episodesBySeason[Number(activeSeason.replace("t", ""))].map(
-          (episode) => (
-            <li key={episode.ID}>
-              <EpisodeAccordion episode={episode} />
-            </li>
-          )
-        )}
+        <EpisodeAccordion
+          episodes={episodesBySeason[Number(activeSeason.replace("t", ""))]}
+        />
       </ul>
     </aside>
   );
