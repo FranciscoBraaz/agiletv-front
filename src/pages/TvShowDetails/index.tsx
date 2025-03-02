@@ -10,10 +10,12 @@ import useManageTabs from "./hooks/useManageTabs";
 import EpisodesList from "../../components/EpisodesList";
 import Tabs from "../../components/Tabs";
 import GeneralInfo from "../../components/GeneralInfo";
+import { CastInfo } from "../../components/CastInfo";
 
 // Styles
 import "./index.scss";
 
+// Constants
 const footerTabs = [
   {
     title: "GENERAL",
@@ -31,7 +33,7 @@ const footerTabs = [
 
 const contentTabs = {
   general: <GeneralInfo synopsis="" />,
-  cast: <p>Cast</p>,
+  cast: <CastInfo cast={[]} />,
   "top-awards": <p>Top Awards</p>,
 };
 
@@ -91,7 +93,7 @@ function TvShowDetails() {
         />
         {React.cloneElement(
           contentTabs[activeTab as keyof typeof contentTabs],
-          { synopsis: tvShowDetails.Synopsis }
+          { synopsis: tvShowDetails.Synopsis, cast: tvShowDetails.Cast }
         )}
       </footer>
     </main>

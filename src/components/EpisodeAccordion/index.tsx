@@ -21,7 +21,7 @@ function EpisodeAccordion({ episodes }: { episodes: Episode[] }) {
   return (
     <Root className="accordion" type="single" collapsible>
       {episodes.map((episode) => (
-        <Item className="accordion__item" value={episode.ID}>
+        <Item key={episode.ID} className="accordion__item" value={episode.ID}>
           <Header className="accordion__header">
             <Trigger
               className="accordion__trigger"
