@@ -1,15 +1,14 @@
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
+
+// Types
+import { Character } from "../../@types/tvShowDetails";
+
+// Custom hooks
+import { usePrevNextButtons } from "./hooks/usePrevNextButtons";
 
 // Styles
 import "./index.scss";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { usePrevNextButtons } from "./hooks/usePrevNextButtons";
-
-interface Character {
-  ID: string;
-  Name: string;
-  Role?: string;
-}
 
 export function CastInfo({ cast }: { cast: Character[] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -35,7 +34,7 @@ export function CastInfo({ cast }: { cast: Character[] }) {
       </div>
       {!prevBtnDisabled && (
         <button
-          className="cast-info__scroll-button cast-info__scroll-prev"
+          className="cast-info__scroll-button cast-info__scroll-button--prev"
           onClick={onPrevButtonClick}
         >
           <ChevronLeft />
@@ -43,7 +42,7 @@ export function CastInfo({ cast }: { cast: Character[] }) {
       )}
       {!nextBtnDisabled && (
         <button
-          className="cast-info__scroll-button cast-info__scroll-next"
+          className="cast-info__scroll-button cast-info__scroll-button--next"
           onClick={onNextButtonClick}
         >
           <ChevronRight />

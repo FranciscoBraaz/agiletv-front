@@ -1,5 +1,7 @@
 // Custtom hooks
 import { CSSProperties, useRef } from "react";
+
+// Custom hooks
 import useDefineClassName from "./hooks/useDefineClassName";
 import useManageTabs from "./hooks/useManageTabs";
 

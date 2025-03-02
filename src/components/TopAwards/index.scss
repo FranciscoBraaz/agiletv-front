@@ -1,0 +1,41 @@
+@use "../../styles/variables.scss";
+
+.top-awards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0px;
+
+  & > article {
+    & > h3 {
+      padding-bottom: 4px;
+      border-bottom: 1px solid #646464;
+    }
+  }
+}
+
+.top-awards__categories {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 16px;
+
+  & > li {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.top-awards__categories__type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px;
+  border-radius: 4px;
+  width: 84px;
+  background-color: #212123;
+
+  &--winner {
+    background-color: variables.$main-default;
+  }
+}

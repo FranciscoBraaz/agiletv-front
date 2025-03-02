@@ -6,15 +6,18 @@ import useGetTvShowEpisodes from "./hooks/useGetTvEpisodes";
 import useGetTvShowDetails from "./hooks/useGetTvShowDetails";
 import useManageTabs from "./hooks/useManageTabs";
 
+// Utils
+import { formatTvShowGenres } from "../../utils";
+
 // Components
 import EpisodesList from "../../components/EpisodesList";
 import Tabs from "../../components/Tabs";
 import GeneralInfo from "../../components/GeneralInfo";
 import { CastInfo } from "../../components/CastInfo";
+import TopAwards from "../../components/TopAwards";
 
 // Styles
 import "./index.scss";
-import { formatTvShowGenres } from "../../utils";
 
 // Constants
 const footerTabs = [
@@ -35,7 +38,7 @@ const footerTabs = [
 const contentTabs = {
   general: <GeneralInfo synopsis="" />,
   cast: <CastInfo cast={[]} />,
-  "top-awards": <p>Top Awards</p>,
+  "top-awards": <TopAwards />,
 };
 
 function TvShowDetails() {

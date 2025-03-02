@@ -1,8 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 
+// Types
+import { Episode, Season } from "../../../@types/episode";
+
 // Custom hooks
 import { getTvShowEpisodes } from "../../../services/tvShowService";
-import { Episode, Season } from "../../../@types/episode";
 
 function useGetTvShowEpisodes() {
   const {
@@ -28,6 +30,7 @@ function useGetTvShowEpisodes() {
           }
         }
       });
+
       return episodesBySeason;
     } catch (error) {
       console.error(error);

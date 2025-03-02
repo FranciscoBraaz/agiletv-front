@@ -25,7 +25,7 @@ function EpisodeAccordion({ episodes }: { episodes: Episode[] }) {
           <Header className="accordion__header">
             <Trigger
               className="accordion__trigger"
-              aria-label="employee-details"
+              aria-label="episode-details"
             >
               <EpisodeTriggerHeader
                 title={episode.Title}
@@ -33,7 +33,7 @@ function EpisodeAccordion({ episodes }: { episodes: Episode[] }) {
               />
             </Trigger>
           </Header>
-          <Content aria-label="employee-details" className="accordion__content">
+          <Content aria-label="episode-details" className="accordion__content">
             <EpisodeContent
               image={episode.Image}
               description={episode.Synopsis}

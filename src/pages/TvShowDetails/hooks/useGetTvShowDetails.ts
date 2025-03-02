@@ -1,8 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 
+// Types
+import { Character, TvShowDetails } from "../../../@types/tvShowDetails";
+
 // Custom hooks
 import { getTvShowDetails } from "../../../services/tvShowService";
-import { Character, TvShowDetails } from "../../../@types/tvShowDetails";
 
 function useGetTvShowDetails() {
   const {

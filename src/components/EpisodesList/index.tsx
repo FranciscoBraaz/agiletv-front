@@ -20,11 +20,11 @@ function EpisodesList({ episodesBySeason }: { episodesBySeason: Season }) {
         activeTab={activeSeason}
         onChange={(item) => handleChangeSeason(item)}
       />
-      <ul>
+      <div className="episodes-list__container">
         <EpisodeAccordion
           episodes={episodesBySeason[Number(activeSeason.replace("t", ""))]}
         />
-      </ul>
+      </div>
     </aside>
   );
 }
