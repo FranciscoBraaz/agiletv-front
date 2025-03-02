@@ -19,6 +19,7 @@ import TopAwards from "../../components/TopAwards";
 // Styles
 import "./index.scss";
 import TvShowSkeleton from "../../components/TvShowSkeleton";
+import TvShowError from "../../components/TvShowError";
 
 // Constants
 const footerTabs = [
@@ -60,7 +61,7 @@ function TvShowDetails() {
   }
 
   if (isErrorShowDetails || isErrorEpisodes) {
-    return <p>Error</p>;
+    return <TvShowError />;
   }
 
   return (

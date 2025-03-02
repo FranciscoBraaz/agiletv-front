@@ -20,12 +20,14 @@ function TvShowSkeleton() {
         <section className="tv-show-skeleton__middle-area">
           <Image />
           <div className="tv-show-skeleton__list-episodes">
-            <Skeleton height={40} {...skeletonColors} />
-            <Skeleton height={40} {...skeletonColors} />
-            <Skeleton height={40} {...skeletonColors} />
-            <Skeleton height={40} {...skeletonColors} />
-            <Skeleton height={40} {...skeletonColors} />
-            <Skeleton height={40} {...skeletonColors} />
+            <Skeleton height={30} {...skeletonColors} />
+            <Skeleton height={30} {...skeletonColors} />
+            <Skeleton height={30} {...skeletonColors} />
+            <Skeleton height={30} {...skeletonColors} />
+            <Skeleton height={30} {...skeletonColors} />
+            <Skeleton height={30} {...skeletonColors} />
+            <Skeleton height={30} {...skeletonColors} />
+            <Skeleton height={30} {...skeletonColors} />
           </div>
         </section>
       </main>

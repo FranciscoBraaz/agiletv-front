@@ -1,0 +1,16 @@
+@use "../../styles/variables.scss";
+
+.tv-show-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  height: 100vh;
+  background-color: variables.$bg-main;
+  padding: 24px;
+
+  & > p {
+    text-align: center;
+  }
+}
