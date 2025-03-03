@@ -1,4 +1,4 @@
-export interface Episode {
+interface Episode {
   Duration: number;
   EpisodeNumber: number;
   ID: string;
@@ -8,6 +8,8 @@ export interface Episode {
   Title: string;
 }
 
-export interface Season {
+interface Season {
   [key: number]: Episode[];
 }
+
+export type { Episode, Season };
