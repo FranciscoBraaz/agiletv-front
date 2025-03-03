@@ -46,6 +46,7 @@ function Tabs({
             style={{ ...styleText }}
             className={defineClassName(tab.key === activeTab)}
             role="button"
+            aria-label="tab"
             onClick={() => onChange(tab.key)}
             key={tab.key}
           >

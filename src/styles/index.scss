@@ -7,10 +7,11 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: variables.$bg-main;
 }
 
 body {
-  background-color: variables.$white;
+  background-color: variables.$bg-main;
   font-family: variables.$font-primary;
   font-weight: 400;
   color: variables.$text-primary;

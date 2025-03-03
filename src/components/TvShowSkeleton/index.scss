@@ -38,12 +38,11 @@
     width: 48px;
     height: 48px;
     margin-left: auto;
-    margin-right: auto;
   }
 }
 
 .tv-show-skeleton__list-episodes {
-  // margin-left: auto;
+  margin-left: auto;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -64,6 +63,8 @@
 
 .tv-show-skeleton__footer-text {
   flex: 1;
+  width: 100%;
+
   & > div {
     margin-top: 8px;
     display: flex;
@@ -72,6 +73,22 @@
 
     & > span {
       height: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: variables.$screen-md) {
+  .tv-show-skeleton__list-episodes {
+    margin-top: 24px;
+  }
+
+  .tv-show-skeleton__middle-area > svg {
+    display: none;
+  }
+
+  .tv-show-skeleton {
+    & > footer {
+      flex-direction: column;
     }
   }
 }
