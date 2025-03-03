@@ -11,11 +11,11 @@ Aplicação desenvolvida com o objetivo de praticar os conhecimentos em React e 
 /src
   ├── /ComponentSample
   │    ├── hooks
-  │        ├── useHookSample.ts     # Lógica de controle que orquestra a lógica de negócios (Controller)
-  │    ├── index.tsx                # Componente React que faz renderização (View)    
+  │        ├── useHookSample.ts    # Lógica de controle que orquestra a lógica de negócios (Controller)
+  │    ├── index.tsx               # Componente React que faz renderização (View)    
   ├── /services
-  │    ├── serviceSample.ts         # Interações com a API
-  ├── App.js                        # Componente principal que orquestra os elementos da UI
+  │    ├── serviceSample.ts        # Interações com a API
+  ├── App.js                       # Componente principal que orquestra os elementos da UI
   ├── index.ts 
 ```
 
