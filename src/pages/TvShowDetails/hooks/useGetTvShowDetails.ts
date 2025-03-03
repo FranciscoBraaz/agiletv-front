@@ -50,6 +50,10 @@ function useGetTvShowDetails() {
       "Sarah Greene": "Hecate Poole",
       "Danny Sapani": "Sembene",
       "David Warner": "Abraham Van Helsing",
+      "Alex Price": "Proteus",
+      "Helen McCrory": "Madame Kali",
+      "Wes Studi": "Kaetenay",
+      "Simon Russell Beale": "Ferdinand Lyle",
     };
 
     const fullCast = cast.map((character) => {
