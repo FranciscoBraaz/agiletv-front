@@ -60,10 +60,13 @@
   position: relative;
 }
 
-@media screen and (max-width: variables.$screen-sm) {
-  .tv-show-details__header > div > h1 {
-    line-height: 52px;
-  }
+.tv-show-details__logo-telecine {
+  width: 52px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  margin-top: -16px;
+  margin-right: 60px;
 }
 
 @media screen and (max-width: variables.$screen-lg) {
@@ -74,5 +77,21 @@
   .tv-show-details__header,
   .tv-show-details__info {
     padding: 24px;
+  }
+
+  .tv-show-details__logo-telecine {
+    margin-right: 22px;
+  }
+}
+
+@media screen and (max-width: variables.$screen-md) {
+  .tv-show-details__logo-telecine {
+    display: none;
+  }
+}
+
+@media screen and (max-width: variables.$screen-sm) {
+  .tv-show-details__header > div > h1 {
+    line-height: 52px;
   }
 }

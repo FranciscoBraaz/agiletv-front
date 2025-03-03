@@ -1,6 +1,9 @@
 import React from "react";
 import { X } from "lucide-react";
 
+// Assets
+import telecineLogo from "../../assets/telecine.png";
+
 // Custom hooks
 import useGetTvShowEpisodes from "./hooks/useGetTvEpisodes";
 import useGetTvShowDetails from "./hooks/useGetTvShowDetails";
@@ -13,13 +16,13 @@ import { formatTvShowGenres } from "../../utils";
 import EpisodesList from "../../components/EpisodesList";
 import Tabs from "../../components/Tabs";
 import GeneralInfo from "../../components/GeneralInfo";
-import { CastInfo } from "../../components/CastInfo";
+import CastInfo from "../../components/CastInfo";
 import TopAwards from "../../components/TopAwards";
+import TvShowSkeleton from "../../components/TvShowSkeleton";
+import TvShowError from "../../components/TvShowError";
 
 // Styles
 import "./index.scss";
-import TvShowSkeleton from "../../components/TvShowSkeleton";
-import TvShowError from "../../components/TvShowError";
 
 // Constants
 const footerTabs = [
@@ -93,6 +96,11 @@ function TvShowDetails() {
         </section>
       </section>
       <footer className="tv-show-details__info">
+        <img
+          src={telecineLogo}
+          alt="Telecine"
+          className="tv-show-details__logo-telecine"
+        />
         <Tabs
           tabs={footerTabs}
           activeTab={activeTab}

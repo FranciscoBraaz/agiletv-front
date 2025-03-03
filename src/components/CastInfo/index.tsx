@@ -10,7 +10,7 @@ import { usePrevNextButtons } from "./hooks/usePrevNextButtons";
 // Styles
 import "./index.scss";
 
-export function CastInfo({ cast }: { cast: Character[] }) {
+function CastInfo({ cast }: { cast: Character[] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
     align: "start",
@@ -51,3 +51,5 @@ export function CastInfo({ cast }: { cast: Character[] }) {
     </div>
   );
 }
+
+export default CastInfo;
