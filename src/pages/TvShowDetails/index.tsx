@@ -71,7 +71,7 @@ function TvShowDetails() {
         style={{
           backgroundImage: `
           linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-          linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)),
+          linear-gradient(to top, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%),
           url(${tvShowDetails?.Images.Background})
         `,
         }}

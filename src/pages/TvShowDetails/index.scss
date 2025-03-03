@@ -7,7 +7,7 @@
 
 .tv-show-details__main-section {
   width: 100%;
-  height: calc(100vh - 220px);
+  min-height: calc(100vh - 220px);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -16,6 +16,7 @@
 .tv-show-details__header {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
   padding: 32px 30px 0px 50px;
   color: variables.$white;
 
@@ -33,6 +34,8 @@
   }
 
   & > svg {
+    min-width: 26px;
+    min-height: 26px;
     stroke-width: 1px;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -53,4 +56,14 @@
   padding: 26px 62px;
   min-height: 220px;
   position: relative;
+}
+
+@media screen and (max-width: variables.$screen-lg) {
+  .tv-show-details__episodes {
+    margin-top: 24px;
+  }
+
+  .tv-show-details__header {
+    padding: 24px;
+  }
 }

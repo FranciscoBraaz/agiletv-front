@@ -1,4 +1,7 @@
-import { CirclePlus, Disc, Frown, Share } from "lucide-react";
+import { CirclePlus, Disc, Share } from "lucide-react";
+
+// Components
+import RateDialog from "../RateDialog";
 
 // Styles
 import "./index.scss";
@@ -14,10 +17,7 @@ function GeneralInfo({ synopsis }: { synopsis: string }) {
           </button>
         </li>
         <li>
-          <button>
-            <Frown size={24} />
-            <p>Evaluar</p>
-          </button>
+          <RateDialog />
         </li>
         <li>
           <button>

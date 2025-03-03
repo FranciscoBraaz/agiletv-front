@@ -1,3 +1,5 @@
+@use "../../styles/variables.scss";
+
 .episodes-list {
   display: flex;
   flex-direction: column;
@@ -9,5 +11,12 @@
   &__container {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: variables.$screen-lg) {
+  .episodes-list {
+    padding: 0 24px;
+    margin-right: 0;
   }
 }

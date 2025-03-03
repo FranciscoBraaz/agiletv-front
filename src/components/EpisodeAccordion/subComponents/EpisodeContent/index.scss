@@ -5,13 +5,27 @@
   margin-top: 4px;
   width: calc(100% - 32px);
 
-  & > img {
-    height: fit-content;
-    max-height: 222px;
-  }
-
   & > p {
     font-size: 14px;
     color: #aeaeb0;
+  }
+}
+
+.episode-content__skeleton-container {
+  width: 100%;
+  max-width: 296px;
+  height: 159.5px;
+}
+
+.episode-content__img {
+  height: 166.5px;
+  opacity: 1;
+  transition: all 0.2s ease;
+  object-fit: cover;
+
+  &--loading {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
   }
 }
