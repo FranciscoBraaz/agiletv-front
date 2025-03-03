@@ -3,7 +3,7 @@
 ## Sobre o projeto
 Aplicação desenvolvida com o objetivo de praticar os conhecimentos em React e Typescript.
 
-##  🔽 Veja funcionando: [AgileTV](https://ubistart-form.netlify.app/)
+##  🔽 Veja funcionando: [AgileTV](https://agiletv.netlify.app/)
 
 ### Arquitetura
 
