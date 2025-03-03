@@ -9,7 +9,7 @@
   & > article {
     & > h3 {
       padding-bottom: 4px;
-      border-bottom: 1px solid #646464;
+      border-bottom: 1px solid variables.$black-400;
     }
   }
 }
@@ -34,7 +34,7 @@
   padding: 0px 8px;
   border-radius: 4px;
   width: 84px;
-  background-color: #212123;
+  background-color: variables.$black-800;
 
   &--winner {
     background-color: variables.$main-default;

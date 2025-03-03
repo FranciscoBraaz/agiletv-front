@@ -1,3 +1,5 @@
+@use "../../../../styles/variables.scss";
+
 .episode-content {
   display: flex;
   flex-direction: column;
@@ -7,7 +9,7 @@
 
   & > p {
     font-size: 14px;
-    color: #aeaeb0;
+    color: variables.$black-350;
   }
 }
 

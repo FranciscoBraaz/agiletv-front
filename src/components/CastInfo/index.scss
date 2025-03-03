@@ -1,3 +1,5 @@
+@use "../../styles/variables.scss";
+
 .cast-info {
   padding: 24px 0px;
   overflow: hidden;
@@ -8,6 +10,7 @@
   display: flex;
   gap: 12px;
   margin-left: calc(var(--slide-spacing) * -1);
+  cursor: grab;
 }
 .cast-info__slide {
   transform: translate3d(0, 0, 0);
@@ -16,7 +19,7 @@
   padding-left: var(--slide-spacing);
   height: 75px;
   border-radius: 4px;
-  background-color: #212123;
+  background-color: variables.$black-800;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,13 +28,13 @@
 
   & > h3 {
     font-size: 16px;
-    color: #b1b2b4;
+    color: variables.$black-200;
     font-weight: 500;
   }
 
   & > p {
     font-size: 12px;
-    color: #6b6c6e;
+    color: variables.$black-500;
   }
 }
 
@@ -52,12 +55,12 @@
     width: 36px;
     height: 36px;
     stroke-width: 1px;
-    color: #646464;
+    color: variables.$black-400;
   }
 
   &:hover {
     & > svg {
-      color: #fff;
+      color: variables.$white;
     }
   }
 }

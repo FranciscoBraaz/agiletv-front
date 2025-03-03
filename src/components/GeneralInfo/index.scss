@@ -30,7 +30,7 @@
 
         & > p {
           font-size: 12px;
-          color: #6b6c6e;
+          color: variables.$black-500;
           transition: color 0.3s ease;
           white-space: nowrap;
         }
@@ -38,7 +38,7 @@
         & > svg {
           width: 28px;
           height: 28px;
-          color: #6b6c6e;
+          color: variables.$black-500;
           transition: color 0.3s ease;
         }
       }
@@ -46,7 +46,7 @@
       &:hover {
         & > button p,
         & > button > svg {
-          color: #fff;
+          color: variables.$white;
         }
       }
     }
@@ -61,13 +61,13 @@
   height: 52.19px;
 
   & > span {
-    color: #6b6c6e;
+    color: variables.$black-500;
     font-size: 20px;
   }
 
   & > p {
     font-size: 12px;
-    color: #6b6c6e;
+    color: variables.$black-500;
     transition: color 0.3s ease;
   }
 }

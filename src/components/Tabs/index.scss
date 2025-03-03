@@ -13,7 +13,7 @@
 }
 
 .tab {
-  color: #b1b2b4;
+  color: variables.$black-200;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -22,14 +22,14 @@
   white-space: nowrap;
 
   &:hover {
-    color: #dedfe1;
+    color: variables.$black-100;
   }
 }
 
 .tabs__line {
   height: 2px;
   position: relative;
-  background-color: #2a2b2d;
+  background-color: variables.$black-600;
   width: 100%;
 }
 

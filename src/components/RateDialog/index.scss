@@ -18,7 +18,7 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #111111;
+  background-color: variables.$black-900;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.4);
   position: fixed;
@@ -51,8 +51,8 @@ input {
 .rate-dialog__submit {
   align-self: flex-end;
   padding: 4px 8px;
-  background-color: #f5a623;
-  color: #fff;
+  background-color: variables.$main-yellow;
+  color: variables.$white;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -83,7 +83,7 @@ input {
   transition: all 0.3s ease;
 }
 .rate-dialog__close:hover {
-  color: #fff;
+  color: variables.$white;
   background-color: rgba(0, 0, 0, 0.9);
 }
 
