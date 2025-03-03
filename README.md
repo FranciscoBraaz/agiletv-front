@@ -19,6 +19,8 @@ Aplicação desenvolvida com o objetivo de praticar os conhecimentos em React e 
   ├── index.ts 
 ```
 
+### Metodologia de estilização utilizada:
+- BEM
 
 ### Tecnologias utilizadas
 - ReactJs
