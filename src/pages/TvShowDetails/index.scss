@@ -11,6 +11,7 @@
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .tv-show-details__header {
@@ -49,6 +50,7 @@
 .tv-show-details__episodes {
   display: flex;
   justify-content: flex-end;
+  padding-bottom: 16px;
 }
 
 .tv-show-details__info {
@@ -58,12 +60,19 @@
   position: relative;
 }
 
+@media screen and (max-width: variables.$screen-sm) {
+  .tv-show-details__header > div > h1 {
+    line-height: 52px;
+  }
+}
+
 @media screen and (max-width: variables.$screen-lg) {
   .tv-show-details__episodes {
     margin-top: 24px;
   }
 
-  .tv-show-details__header {
+  .tv-show-details__header,
+  .tv-show-details__info {
     padding: 24px;
   }
 }

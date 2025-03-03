@@ -66,41 +66,6 @@ h4 {
   font-weight: 500;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  padding: 0 5%;
-  width: 90%;
-  max-width: 1280px;
-}
-
-.form__error-message {
-  font-size: 14px;
-  text-align: center;
-  font-weight: 400;
-  color: variables.$error-default;
-  animation: fadeIn 0.2s ease;
-}
-
-.form__success-message {
-  font-size: 14px;
-  text-align: center;
-  font-weight: 400;
-  color: variables.$main-default;
-  animation: fadeIn 0.2s ease;
-}
-
 @media (min-width: variables.$screen-xl) {
   h1 {
     font-size: 36px;
@@ -141,19 +106,4 @@ h4 {
   to {
     opacity: 1;
   }
-}
-
-.Toastify__toast--success {
-  background-color: variables.$main-default !important;
-  color: variables.$white;
-}
-
-.Toastify__toast--error {
-  background-color: #e5484d !important;
-  color: variables.$white;
-}
-
-.Toastify__toast--info {
-  background-color: #0090ff !important;
-  color: variables.$white;
 }

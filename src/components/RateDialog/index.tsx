@@ -5,8 +5,11 @@ import Rate from "rc-rate";
 // Styles
 import "./index.scss";
 import "rc-rate/assets/index.css";
+import useRate from "./hooks/useRate";
 
-function RateDialog() {
+function RateDialog({ onRate }: { onRate: (value: number) => void }) {
+  const { rate, handleRate } = useRate();
+
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
@@ -26,15 +29,26 @@ function RateDialog() {
             recomendações para você e outros fãs.
           </Dialog.Description>
           <Rate
+            value={rate}
             count={5}
+            allowHalf
             style={{
               display: "flex",
               flexDirection: "row",
               marginTop: 16,
               fontSize: 24,
             }}
+            onChange={(value) => handleRate(value)}
           />
-          <button className="rate-dialog__submit">Avaliar</button>
+          <Dialog.Close asChild>
+            <button
+              className="rate-dialog__submit"
+              onClick={() => onRate(rate)}
+            >
+              Avaliar
+            </button>
+          </Dialog.Close>
+
           <Dialog.Close asChild>
             <button className="rate-dialog__close" aria-label="Close">
               <X size={18} />

@@ -22,6 +22,7 @@
 
   & > li {
     display: flex;
+    align-items: flex-start;
     gap: 8px;
   }
 }
@@ -37,5 +38,18 @@
 
   &--winner {
     background-color: variables.$main-default;
+  }
+}
+
+@media screen and (max-width: variables.$screen-sm) {
+  .top-awards__categories {
+    & > li {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  .top-awards__categories__type {
+    width: 100%;
   }
 }
